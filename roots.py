@@ -1,5 +1,5 @@
 def linear_roots(a=1.0, b=0.0):
-   """Returns the roots of a linear equation: ax+ b = 0
+    """Returns the roots of a linear equation: ax+ b = 0
         INPUTS
         =======
         a: float, optional, default value is 1
@@ -41,11 +41,11 @@ def quad_roots(a=1.0, b=2.0, c=0.0):
      =========
      >>> quad_roots(1.0, 1.0, -12.0)                                                                                                  ((3+0j), (-4+0j))                                                                                             """
     import cmath # Can return complex numbers from square roots
-        if a == 0:
-            raise ValueError("The quadratic coefficient is zero.  This is not a quadratic equation.")
-        else:
-            sqrtdisc = cmath.sqrt(b * b - 4.0 * a * c)
-            r1 = -b + sqrtdisc
-            r2 = -b - sqrtdisc
-            twoa = 2.0 * a
-            return (r1 / twoa, r2 / twoa)
+    if a == 0:
+        raise ValueError("The quadratic coefficient is zero.  This is not a quadratic equation.")
+    else:
+        sqrtdisc = cmath.sqrt(b * b - 4.0 * a * c)
+        r1 = -b + sqrtdisc
+        r2 = -b - sqrtdisc
+        twoa = 2.0 * a
+        return (r1 / twoa, r2 / twoa)
